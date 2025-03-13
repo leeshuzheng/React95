@@ -21,3 +21,17 @@ export function Default() {
 Default.story = {
   name: 'default'
 };
+
+export function WithCustomDimensions() {
+  return (
+    <Monitor
+      backgroundStyles={{ background: 'blue' }}
+      width='600px'
+      height='400px'
+    />
+  );
+}
+
+WithCustomDimensions.story = {
+  name: 'With Custom Dimensions'
+};

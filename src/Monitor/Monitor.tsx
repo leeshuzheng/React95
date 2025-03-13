@@ -6,7 +6,14 @@ import { StyledScrollView } from '../ScrollView/ScrollView';
 type MonitorProps = {
   backgroundStyles?: React.CSSProperties;
   children?: React.ReactNode;
+  width?: string;
+  height?: string;
 };
+
+interface MonitorBodyProps {
+  width?: string;
+  height?: string;
+}
 
 const Wrapper = styled.div`
   position: relative;
@@ -18,7 +25,7 @@ const Inner = styled.div`
   position: relative;
 `;
 
-const MonitorBody = styled.div`
+const MonitorBody = styled.div<MonitorBodyProps>`
   position: relative;
   z-index: 1;
   box-sizing: border-box;
@@ -107,11 +114,11 @@ const Stand = styled.div`
 `;
 
 const Monitor = forwardRef<HTMLDivElement, MonitorProps>(
-  ({ backgroundStyles, children, ...otherProps }, ref) => {
+  ({ backgroundStyles, children, width, height, ...otherProps }, ref) => {
     return (
       <Wrapper ref={ref} {...otherProps}>
         <Inner>
-          <MonitorBody width={otherProps.width} height={otherProps.height}>
+          <MonitorBody width={width} height={height}>
             <Background style={backgroundStyles}>{children}</Background>
           </MonitorBody>
           <Stand />
