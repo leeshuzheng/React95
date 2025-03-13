@@ -22,8 +22,8 @@ const MonitorBody = styled.div`
   position: relative;
   z-index: 1;
   box-sizing: border-box;
-  width: 195px;
-  height: 155px;
+  width: ${props => props.width || '195px'};
+  height: ${props => props.height || '155px'};
   padding: 12px;
   background: ${({ theme }) => theme.material};
   border-top: 4px solid ${({ theme }) => theme.borderLightest};
@@ -111,7 +111,7 @@ const Monitor = forwardRef<HTMLDivElement, MonitorProps>(
     return (
       <Wrapper ref={ref} {...otherProps}>
         <Inner>
-          <MonitorBody>
+          <MonitorBody width={otherProps.width} height={otherProps.height}>
             <Background style={backgroundStyles}>{children}</Background>
           </MonitorBody>
           <Stand />
