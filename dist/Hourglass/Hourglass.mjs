@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { getSize } from '../common/utils/index.mjs';
 import base64hourglass from './base64hourglass.mjs';
@@ -16,10 +16,10 @@ const StyledHourglass = styled.span`
   height: 100%;
 `;
 const Hourglass = forwardRef(({ size = 30, ...otherProps }, ref) => {
-  return React__default.createElement(
+  return React.createElement(
     StyledContainer,
     { size, ref, ...otherProps },
-    React__default.createElement(StyledHourglass, null)
+    React.createElement(StyledHourglass, null)
   );
 });
 Hourglass.displayName = "Hourglass";

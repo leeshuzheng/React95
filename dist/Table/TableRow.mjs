@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { blockSizes } from '../common/system.mjs';
 
@@ -17,7 +17,7 @@ const StyledTr = styled.tr`
   }
 `;
 const TableRow = forwardRef(function TableRow2({ children, ...otherProps }, ref) {
-  return React__default.createElement(StyledTr, { ref, ...otherProps }, children);
+  return React.createElement(StyledTr, { ref, ...otherProps }, children);
 });
 TableRow.displayName = "TableRow";
 

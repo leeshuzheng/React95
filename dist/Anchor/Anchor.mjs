@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 
 const StyledAnchor = styled.a`
@@ -10,7 +10,7 @@ const StyledAnchor = styled.a`
   }
 `;
 const Anchor = forwardRef(({ children, underline = true, ...otherProps }, ref) => {
-  return React__default.createElement(StyledAnchor, { ref, underline, ...otherProps }, children);
+  return React.createElement(StyledAnchor, { ref, underline, ...otherProps }, children);
 });
 Anchor.displayName = "Anchor";
 

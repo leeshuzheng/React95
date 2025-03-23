@@ -1,4 +1,4 @@
-import React__default, { forwardRef, useRef, useImperativeHandle, useMemo, useCallback } from 'react';
+import React, { forwardRef, useRef, useImperativeHandle, useMemo, useCallback } from 'react';
 import { useId } from '../common/hooks/useId.mjs';
 import { StyledInner, StyledSelectContent, StyledDropdownMenu, StyledDropdownMenuItem } from './Select.styles.mjs';
 import { useSelectCommon } from './useSelectCommon.mjs';
@@ -13,7 +13,7 @@ function SelectInnerOption({ activateOptionIndex, active, index, onClick, option
     setRef(ref, index);
   }, [index, setRef]);
   const id = useId();
-  return React__default.createElement(StyledDropdownMenuItem, { active, "aria-selected": selected ? "true" : void 0, "data-value": option.value, id, onClick, onMouseEnter: handleOnMouseEnter, ref: handleSetRef, role: "option", tabIndex: 0 }, option.label);
+  return React.createElement(StyledDropdownMenuItem, { active, "aria-selected": selected ? "true" : void 0, "data-value": option.value, id, onClick, onMouseEnter: handleOnMouseEnter, ref: handleSetRef, role: "option", tabIndex: 0 }, option.label);
 }
 function SelectInner({ "aria-label": ariaLabel, "aria-labelledby": ariaLabelledBy, className, defaultValue, disabled = false, formatDisplay, inputProps, labelId, menuMaxHeight, name, onBlur, onChange, onClose, onFocus, onKeyDown, onMouseDown, onOpen, open: openProp, options: optionsProp, readOnly, shadow = true, style, variant = "default", value: valueProp, width = "auto", ...otherProps }, ref) {
   const { isEnabled, options, setValue, value, wrapperProps, DropdownButton, Wrapper } = useSelectCommon({
@@ -63,7 +63,7 @@ function SelectInner({ "aria-label": ariaLabel, "aria-labelledby": ariaLabelledB
     const key = `${value}-${index}`;
     const active = option === activeOption;
     const selected = option === selectedOption;
-    return React__default.createElement(SelectInnerOption, { activateOptionIndex: handleActivateOptionIndex, active, index, key, onClick: handleOptionClick, option, selected, setRef: handleSetOptionRef });
+    return React.createElement(SelectInnerOption, { activateOptionIndex: handleActivateOptionIndex, active, index, key, onClick: handleOptionClick, option, selected, setRef: handleSetOptionRef });
   }), [
     activeOption,
     handleActivateOptionIndex,
@@ -73,17 +73,17 @@ function SelectInner({ "aria-label": ariaLabel, "aria-labelledby": ariaLabelledB
     selectedOption,
     value
   ]);
-  return React__default.createElement(
+  return React.createElement(
     Wrapper,
     { ...wrapperProps, "$disabled": disabled, ref: wrapperRef, shadow, style: { ...style, width } },
-    React__default.createElement("input", { name, ref: inputRef, type: "hidden", value: String(value), ...inputProps }),
-    React__default.createElement(
+    React.createElement("input", { name, ref: inputRef, type: "hidden", value: String(value), ...inputProps }),
+    React.createElement(
       StyledInner,
       { "aria-disabled": disabled, "aria-expanded": open, "aria-haspopup": "listbox", "aria-label": ariaLabel, "aria-labelledby": ariaLabelledBy !== null && ariaLabelledBy !== void 0 ? ariaLabelledBy : labelId, "aria-owns": isEnabled && open ? dropdownMenuId : void 0, onBlur: handleBlur, onFocus: handleFocus, onKeyDown: handleButtonKeyDown, onMouseDown: isEnabled ? handleMouseDown : onMouseDown, ref: selectRef, role: "button", tabIndex, ...otherProps },
-      React__default.createElement(StyledSelectContent, null, displayLabel),
+      React.createElement(StyledSelectContent, null, displayLabel),
       DropdownButton
     ),
-    isEnabled && open && React__default.createElement(StyledDropdownMenu, { id: dropdownMenuId, onKeyDown: handleDropdownKeyDown, ref: handleSetDropdownRef, role: "listbox", style: dropdownMenuStyle, tabIndex: 0, variant }, optionsContent)
+    isEnabled && open && React.createElement(StyledDropdownMenu, { id: dropdownMenuId, onKeyDown: handleDropdownKeyDown, ref: handleSetDropdownRef, role: "listbox", style: dropdownMenuStyle, tabIndex: 0, variant }, optionsContent)
   );
 }
 const Select = forwardRef(SelectInner);

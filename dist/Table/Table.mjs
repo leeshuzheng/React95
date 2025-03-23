@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { StyledScrollView } from '../ScrollView/ScrollView.mjs';
 export { TableBody } from './TableBody.mjs';
@@ -20,10 +20,10 @@ const Wrapper = styled(StyledScrollView)`
   }
 `;
 const Table = forwardRef(({ children, ...otherProps }, ref) => {
-  return React__default.createElement(
+  return React.createElement(
     Wrapper,
     null,
-    React__default.createElement(StyledTable, { ref, ...otherProps }, children)
+    React.createElement(StyledTable, { ref, ...otherProps }, children)
   );
 });
 Table.displayName = "Table";

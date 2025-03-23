@@ -20,7 +20,6 @@ export { Radio } from './Radio/Radio.mjs';
 export { ScrollView, StyledScrollView } from './ScrollView/ScrollView.mjs';
 export { Select } from './Select/Select.mjs';
 export { Separator } from './Separator/Separator.mjs';
-export { Slider } from './Slider/Slider.mjs';
 export { Table } from './Table/Table.mjs';
 export { Tabs } from './Tabs/Tabs.mjs';
 export { TextInput } from './TextInput/TextInput.mjs';

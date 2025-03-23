@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { StyledButton } from '../Button/Button.mjs';
 
@@ -25,7 +25,7 @@ const StyledWindowHeader = styled.div`
   }
 `;
 const WindowHeader = forwardRef(function WindowHeader2({ active = true, children, ...otherProps }, ref) {
-  return React__default.createElement(StyledWindowHeader, { active, ref, ...otherProps }, children);
+  return React.createElement(StyledWindowHeader, { active, ref, ...otherProps }, children);
 });
 WindowHeader.displayName = "WindowHeader";
 

@@ -1,4 +1,4 @@
-import React__default, { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import useControlledOrUncontrolled from '../common/hooks/useControlledOrUncontrolled.mjs';
 import { StyledDropdownButton, StyledDropdownIcon, StyledFlatSelectWrapper, StyledSelectWrapper } from './Select.styles.mjs';
 
@@ -17,10 +17,10 @@ const useSelectCommon = ({ className, defaultValue, disabled, native, onChange, 
     className,
     style: { ...style, width }
   }), [className, style, width]);
-  const DropdownButton = useMemo(() => React__default.createElement(
+  const DropdownButton = useMemo(() => React.createElement(
     StyledDropdownButton,
     { as: "div", "data-testid": "select-button", "$disabled": disabled, native, tabIndex: -1, variant: variant === "flat" ? "flat" : "raised" },
-    React__default.createElement(StyledDropdownIcon, { "data-testid": "select-icon", "$disabled": disabled })
+    React.createElement(StyledDropdownIcon, { "data-testid": "select-icon", "$disabled": disabled })
   ), [disabled, native, variant]);
   const Wrapper = useMemo(() => variant === "flat" ? StyledFlatSelectWrapper : StyledSelectWrapper, [variant]);
   return useMemo(() => ({

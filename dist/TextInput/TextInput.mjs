@@ -1,4 +1,4 @@
-import React__default, { forwardRef, useMemo } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 import styled, { css } from 'styled-components';
 import { createFlatBoxStyles, createDisabledTextStyles, createScrollbars } from '../common/index.mjs';
 import { blockSizes } from '../common/system.mjs';
@@ -52,9 +52,9 @@ const TextInput = forwardRef(({ className, disabled = false, fullWidth, onChange
   const WrapperComponent = variant === "flat" ? FlatWrapper : Wrapper;
   const field = useMemo(() => {
     var _a;
-    return otherProps.multiline ? React__default.createElement(StyledTextArea, { disabled, onChange: disabled ? void 0 : onChange, readOnly: disabled, ref, variant, ...otherProps }) : React__default.createElement(StyledTextInput, { disabled, onChange: disabled ? void 0 : onChange, readOnly: disabled, ref, type: (_a = otherProps.type) !== null && _a !== void 0 ? _a : "text", variant, ...otherProps });
+    return otherProps.multiline ? React.createElement(StyledTextArea, { disabled, onChange: disabled ? void 0 : onChange, readOnly: disabled, ref, variant, ...otherProps }) : React.createElement(StyledTextInput, { disabled, onChange: disabled ? void 0 : onChange, readOnly: disabled, ref, type: (_a = otherProps.type) !== null && _a !== void 0 ? _a : "text", variant, ...otherProps });
   }, [disabled, onChange, otherProps, ref, variant]);
-  return React__default.createElement(WrapperComponent, { className, fullWidth, "$disabled": disabled, shadow, style }, field);
+  return React.createElement(WrapperComponent, { className, fullWidth, "$disabled": disabled, shadow, style }, field);
 });
 TextInput.displayName = "TextInput";
 

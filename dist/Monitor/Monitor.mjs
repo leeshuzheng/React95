@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { StyledScrollView } from '../ScrollView/ScrollView.mjs';
 
@@ -96,18 +96,18 @@ const Stand = styled.div`
   }
 `;
 const Monitor = forwardRef(({ backgroundStyles, children, width, height, ...otherProps }, ref) => {
-  return React__default.createElement(
+  return React.createElement(
     Wrapper,
     { ref, ...otherProps },
-    React__default.createElement(
+    React.createElement(
       Inner,
       null,
-      React__default.createElement(
+      React.createElement(
         MonitorBody,
         { width, height },
-        React__default.createElement(Background, { style: backgroundStyles }, children)
+        React.createElement(Background, { style: backgroundStyles }, children)
       ),
-      React__default.createElement(Stand, null)
+      React.createElement(Stand, null)
     )
   );
 });

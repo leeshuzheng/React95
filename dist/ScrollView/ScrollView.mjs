@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { insetShadow, createScrollbars } from '../common/index.mjs';
 
@@ -42,10 +42,10 @@ const Content = styled.div`
   ${createScrollbars()}
 `;
 const ScrollView = forwardRef(({ children, shadow = true, ...otherProps }, ref) => {
-  return React__default.createElement(
+  return React.createElement(
     StyledScrollView,
     { ref, shadow, ...otherProps },
-    React__default.createElement(Content, null, children)
+    React.createElement(Content, null, children)
   );
 });
 ScrollView.displayName = "ScrollView";

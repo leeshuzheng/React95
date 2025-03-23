@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { createDisabledTextStyles } from '../common/index.mjs';
 
@@ -28,10 +28,10 @@ const StyledLegend = styled.legend`
   background: ${({ theme, variant }) => variant === "flat" ? theme.canvas : theme.material};
 `;
 const GroupBox = forwardRef(({ label, disabled = false, variant = "default", children, ...otherProps }, ref) => {
-  return React__default.createElement(
+  return React.createElement(
     StyledFieldset,
     { "aria-disabled": disabled, "$disabled": disabled, variant, ref, ...otherProps },
-    label && React__default.createElement(StyledLegend, { variant }, label),
+    label && React.createElement(StyledLegend, { variant }, label),
     children
   );
 });

@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { createBorderStyles, createDisabledTextStyles } from '../common/index.mjs';
 import { noOp } from '../common/utils/index.mjs';
@@ -49,10 +49,10 @@ const StyledHeadCell = styled.th`
 `;
 const TableHeadCell = forwardRef(function TableHeadCell2({ disabled = false, children, onClick, onTouchStart = noOp, sort, ...otherProps }, ref) {
   const ariaSort = sort === "asc" ? "ascending" : sort === "desc" ? "descending" : void 0;
-  return React__default.createElement(
+  return React.createElement(
     StyledHeadCell,
     { "$disabled": disabled, "aria-disabled": disabled, "aria-sort": ariaSort, onClick: disabled ? void 0 : onClick, onTouchStart: disabled ? void 0 : onTouchStart, ref, ...otherProps },
-    React__default.createElement("div", null, children)
+    React.createElement("div", null, children)
   );
 });
 TableHeadCell.displayName = "TableHeadCell";

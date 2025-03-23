@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { createBorderStyles, createBoxStyles } from '../common/index.mjs';
 
@@ -18,7 +18,7 @@ const StyledAppBar = styled.header`
   width: 100%;
 `;
 const AppBar = forwardRef(({ children, fixed = true, position = "fixed", ...otherProps }, ref) => {
-  return React__default.createElement(StyledAppBar, { fixed, position: fixed !== false ? position : void 0, ref, ...otherProps }, children);
+  return React.createElement(StyledAppBar, { fixed, position: fixed !== false ? position : void 0, ref, ...otherProps }, children);
 });
 AppBar.displayName = "AppBar";
 

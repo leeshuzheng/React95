@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { createFlatBoxStyles } from '../common/index.mjs';
 import { size, StyledLabel, StyledInput, LabelText } from '../common/SwitchBase.mjs';
@@ -65,12 +65,12 @@ const CheckboxComponents = {
 };
 const Radio = forwardRef(({ checked, className = "", disabled = false, label = "", onChange, style = {}, variant = "default", ...otherProps }, ref) => {
   const CheckboxComponent = CheckboxComponents[variant];
-  return React__default.createElement(
+  return React.createElement(
     StyledLabel,
     { "$disabled": disabled, className, style },
-    React__default.createElement(CheckboxComponent, { "$disabled": disabled, role: "presentation" }, checked && React__default.createElement(Icon, { "$disabled": disabled, variant })),
-    React__default.createElement(StyledInput, { disabled, onChange: disabled ? void 0 : onChange, readOnly: disabled, type: "radio", checked, ref, ...otherProps }),
-    label && React__default.createElement(LabelText, null, label)
+    React.createElement(CheckboxComponent, { "$disabled": disabled, role: "presentation" }, checked && React.createElement(Icon, { "$disabled": disabled, variant })),
+    React.createElement(StyledInput, { disabled, onChange: disabled ? void 0 : onChange, readOnly: disabled, type: "radio", checked, ref, ...otherProps }),
+    label && React.createElement(LabelText, null, label)
   );
 });
 Radio.displayName = "Radio";

@@ -1,4 +1,4 @@
-import React__default, { forwardRef, useCallback } from 'react';
+import React, { forwardRef, useCallback } from 'react';
 import styled, { css } from 'styled-components';
 import { Button } from '../Button/Button.mjs';
 import useControlledOrUncontrolled from '../common/hooks/useControlledOrUncontrolled.mjs';
@@ -86,25 +86,25 @@ const NumberInput = forwardRef(({ className, defaultValue, disabled = false, max
     handleClick(-step);
   }, [handleClick, step]);
   const buttonVariant = variant === "flat" ? "flat" : "raised";
-  return React__default.createElement(
+  return React.createElement(
     StyledNumberInputWrapper,
     { className, style: {
       ...style,
       width: width !== void 0 ? getSize(width) : "auto"
     }, ...otherProps },
-    React__default.createElement(TextInput, { value: valueDerived, variant, onChange: handleInputChange, disabled, type: "number", readOnly, ref, fullWidth: true, onBlur }),
-    React__default.createElement(
+    React.createElement(TextInput, { value: valueDerived, variant, onChange: handleInputChange, disabled, type: "number", readOnly, ref, fullWidth: true, onBlur }),
+    React.createElement(
       StyledButtonWrapper,
       { variant },
-      React__default.createElement(
+      React.createElement(
         StyledButton,
         { "data-testid": "increment", variant: buttonVariant, disabled: disabled || readOnly, onClick: stepUp },
-        React__default.createElement(StyledButtonIcon, { invert: true })
+        React.createElement(StyledButtonIcon, { invert: true })
       ),
-      React__default.createElement(
+      React.createElement(
         StyledButton,
         { "data-testid": "decrement", variant: buttonVariant, disabled: disabled || readOnly, onClick: stepDown },
-        React__default.createElement(StyledButtonIcon, null)
+        React.createElement(StyledButtonIcon, null)
       )
     )
   );

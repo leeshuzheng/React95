@@ -20,7 +20,6 @@ export * from './Radio/Radio';
 export * from './ScrollView/ScrollView';
 export * from './Select/Select';
 export * from './Separator/Separator';
-export * from './Slider/Slider';
 export * from './Table/Table';
 export * from './Tabs/Tabs';
 export * from './TextInput/TextInput';

@@ -1,4 +1,4 @@
-import React__default, { forwardRef, useCallback } from 'react';
+import React, { forwardRef, useCallback } from 'react';
 import styled, { css } from 'styled-components';
 import { createHatchedBackground } from '../common/index.mjs';
 import useControlledOrUncontrolled from '../common/hooks/useControlledOrUncontrolled.mjs';
@@ -105,12 +105,12 @@ const Checkbox = forwardRef(({ checked, className = "", defaultChecked = false, 
   } else if (state) {
     Icon = CheckmarkIcon;
   }
-  return React__default.createElement(
+  return React.createElement(
     StyledLabel,
     { "$disabled": disabled, className, style },
-    React__default.createElement(StyledInput, { disabled, onChange: disabled ? void 0 : handleChange, readOnly: disabled, type: "checkbox", value, checked: state, "data-indeterminate": indeterminate, ref, ...otherProps }),
-    React__default.createElement(CheckboxComponent, { "$disabled": disabled, role: "presentation" }, Icon && React__default.createElement(Icon, { "$disabled": disabled, variant })),
-    label && React__default.createElement(LabelText, null, label)
+    React.createElement(StyledInput, { disabled, onChange: disabled ? void 0 : handleChange, readOnly: disabled, type: "checkbox", value, checked: state, "data-indeterminate": indeterminate, ref, ...otherProps }),
+    React.createElement(CheckboxComponent, { "$disabled": disabled, role: "presentation" }, Icon && React.createElement(Icon, { "$disabled": disabled, variant })),
+    label && React.createElement(LabelText, null, label)
   );
 });
 Checkbox.displayName = "Checkbox";

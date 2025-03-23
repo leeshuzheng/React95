@@ -1,4 +1,4 @@
-import React__default, { forwardRef, useRef, useState, useCallback, useEffect } from 'react';
+import React, { forwardRef, useRef, useState, useCallback, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import { blockSizes } from '../common/system.mjs';
 import { StyledScrollView } from '../ScrollView/ScrollView.mjs';
@@ -89,15 +89,15 @@ const ProgressBar = forwardRef(({ hideValue = false, shadow = true, value, varia
     window.addEventListener("resize", updateTilesNumber);
     return () => window.removeEventListener("resize", updateTilesNumber);
   }, [updateTilesNumber]);
-  return React__default.createElement(
+  return React.createElement(
     Wrapper,
     { "aria-valuenow": value !== void 0 ? Math.round(value) : void 0, ref, role: "progressbar", variant, ...otherProps },
-    React__default.createElement(ProgressCutout, { variant, shadow }, variant === "default" ? React__default.createElement(
-      React__default.Fragment,
+    React.createElement(ProgressCutout, { variant, shadow }, variant === "default" ? React.createElement(
+      React.Fragment,
       null,
-      React__default.createElement(WhiteBar, { "data-testid": "defaultProgress1" }, displayValue),
-      React__default.createElement(BlueBar, { "data-testid": "defaultProgress2", value }, displayValue)
-    ) : React__default.createElement(TilesWrapper, { ref: tilesWrapperRef, "data-testid": "tileProgress" }, tiles.map((_, index) => React__default.createElement(Tile, { key: index }))))
+      React.createElement(WhiteBar, { "data-testid": "defaultProgress1" }, displayValue),
+      React.createElement(BlueBar, { "data-testid": "defaultProgress2", value }, displayValue)
+    ) : React.createElement(TilesWrapper, { ref: tilesWrapperRef, "data-testid": "tileProgress" }, tiles.map((_, index) => React.createElement(Tile, { key: index }))))
   );
 });
 ProgressBar.displayName = "ProgressBar";

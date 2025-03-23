@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { StyledButton } from '../Button/Button.mjs';
 import { focusOutline } from '../common/index.mjs';
@@ -95,13 +95,13 @@ const ColorInput = forwardRef(({ value, defaultValue, onChange = noOp, disabled 
     setValueState(color);
     onChange(e);
   };
-  return React__default.createElement(
+  return React.createElement(
     Trigger,
     { disabled, as: "div", variant, size: "md" },
-    React__default.createElement(StyledColorInput, { onChange: handleChange, readOnly: disabled, disabled, value: valueDerived !== null && valueDerived !== void 0 ? valueDerived : "#008080", type: "color", ref, ...otherProps }),
-    React__default.createElement(ColorPreview, { "$disabled": disabled, color: valueDerived !== null && valueDerived !== void 0 ? valueDerived : "#008080", role: "presentation" }),
-    variant === "default" && React__default.createElement(StyledSeparator, { orientation: "vertical" }),
-    React__default.createElement(ChevronIcon, { "$disabled": disabled, variant })
+    React.createElement(StyledColorInput, { onChange: handleChange, readOnly: disabled, disabled, value: valueDerived !== null && valueDerived !== void 0 ? valueDerived : "#008080", type: "color", ref, ...otherProps }),
+    React.createElement(ColorPreview, { "$disabled": disabled, color: valueDerived !== null && valueDerived !== void 0 ? valueDerived : "#008080", role: "presentation" }),
+    variant === "default" && React.createElement(StyledSeparator, { orientation: "vertical" }),
+    React.createElement(ChevronIcon, { "$disabled": disabled, variant })
   );
 });
 ColorInput.displayName = "ColorInput";

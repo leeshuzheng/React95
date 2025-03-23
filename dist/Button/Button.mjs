@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { createFlatBoxStyles, focusOutline, createBoxStyles, createBorderStyles, createDisabledTextStyles, createHatchedBackground } from '../common/index.mjs';
 import { blockSizes } from '../common/system.mjs';
@@ -112,7 +112,7 @@ const StyledButton = styled.button`
   ${commonButtonStyles}
 `;
 const Button = forwardRef(({ onClick, disabled = false, children, type = "button", fullWidth = false, size = "md", square = false, active = false, onTouchStart = noOp, primary = false, variant = "default", ...otherProps }, ref) => {
-  return React__default.createElement(StyledButton, { active, disabled, "$disabled": disabled, fullWidth, onClick: disabled ? void 0 : onClick, onTouchStart, primary, ref, size, square, type, variant, ...otherProps }, children);
+  return React.createElement(StyledButton, { active, disabled, "$disabled": disabled, fullWidth, onClick: disabled ? void 0 : onClick, onTouchStart, primary, ref, size, square, type, variant, ...otherProps }, children);
 });
 Button.displayName = "Button";
 

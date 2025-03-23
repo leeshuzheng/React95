@@ -1,4 +1,4 @@
-import React__default from 'react';
+import React from 'react';
 import styled, { css } from 'styled-components';
 import { createHatchedBackground } from '../common/index.mjs';
 
@@ -164,7 +164,7 @@ const digitActiveSegments = [
 ];
 function Digit({ digit = 0, pixelSize = 2, ...otherProps }) {
   const segmentClasses = digitActiveSegments[Number(digit)].map((isActive, i) => isActive ? `${segments[i]} active` : segments[i]);
-  return React__default.createElement(DigitWrapper, { pixelSize, ...otherProps }, segmentClasses.map((className, i) => React__default.createElement("span", { className, key: i })));
+  return React.createElement(DigitWrapper, { pixelSize, ...otherProps }, segmentClasses.map((className, i) => React.createElement("span", { className, key: i })));
 }
 
 export { Digit };

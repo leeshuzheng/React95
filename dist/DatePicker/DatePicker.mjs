@@ -1,4 +1,4 @@
-import React__default, { forwardRef, useState, useCallback, useMemo } from 'react';
+import React, { forwardRef, useState, useCallback, useMemo } from 'react';
 import styled from 'styled-components';
 import { Button } from '../Button/Button.mjs';
 import { NumberInput } from '../NumberInput/NumberInput.mjs';
@@ -92,58 +92,58 @@ const DatePicker = forwardRef(({ className, date: initialDate = new Date().toISO
     items.forEach((_, i) => {
       if (i >= firstDayIndex && i < daysNumber + firstDayIndex) {
         const dayNumber = i - firstDayIndex + 1;
-        items[i] = React__default.createElement(
+        items[i] = React.createElement(
           DateItem,
           { key: i, onClick: () => {
             handleDaySelect(dayNumber);
           } },
-          React__default.createElement(DateItemContent, { active: dayNumber === itemDay }, dayNumber)
+          React.createElement(DateItemContent, { active: dayNumber === itemDay }, dayNumber)
         );
       } else {
-        items[i] = React__default.createElement(DateItem, { key: i });
+        items[i] = React.createElement(DateItem, { key: i });
       }
     });
     return items;
   }, [day, handleDaySelect, month, year]);
-  return React__default.createElement(
+  return React.createElement(
     Window,
     { className, ref, shadow, style: { margin: 20 } },
-    React__default.createElement(
+    React.createElement(
       WindowHeader,
       null,
-      React__default.createElement("span", { role: "img", "aria-label": "\u{1F4C6}" }, "\u{1F4C6}"),
+      React.createElement("span", { role: "img", "aria-label": "\u{1F4C6}" }, "\u{1F4C6}"),
       "Date"
     ),
-    React__default.createElement(
+    React.createElement(
       WindowContent,
       null,
-      React__default.createElement(
+      React.createElement(
         Toolbar,
         { noPadding: true, style: { justifyContent: "space-between" } },
-        React__default.createElement(Select, { options: months, value: month, onChange: handleMonthSelect, width: 128, menuMaxHeight: 200 }),
-        React__default.createElement(NumberInput, { value: year, onChange: handleYearSelect, width: 100 })
+        React.createElement(Select, { options: months, value: month, onChange: handleMonthSelect, width: 128, menuMaxHeight: 200 }),
+        React.createElement(NumberInput, { value: year, onChange: handleYearSelect, width: 100 })
       ),
-      React__default.createElement(
+      React.createElement(
         Calendar,
         null,
-        React__default.createElement(
+        React.createElement(
           WeekDays,
           null,
-          React__default.createElement(DateItem, null, "S"),
-          React__default.createElement(DateItem, null, "M"),
-          React__default.createElement(DateItem, null, "T"),
-          React__default.createElement(DateItem, null, "W"),
-          React__default.createElement(DateItem, null, "T"),
-          React__default.createElement(DateItem, null, "F"),
-          React__default.createElement(DateItem, null, "S")
+          React.createElement(DateItem, null, "S"),
+          React.createElement(DateItem, null, "M"),
+          React.createElement(DateItem, null, "T"),
+          React.createElement(DateItem, null, "W"),
+          React.createElement(DateItem, null, "T"),
+          React.createElement(DateItem, null, "F"),
+          React.createElement(DateItem, null, "S")
         ),
-        React__default.createElement(Dates, null, dayPickerItems)
+        React.createElement(Dates, null, dayPickerItems)
       ),
-      React__default.createElement(
+      React.createElement(
         Toolbar,
         { noPadding: true, style: { justifyContent: "space-between" } },
-        React__default.createElement(Button, { fullWidth: true, onClick: onCancel, disabled: !onCancel }, "Cancel"),
-        React__default.createElement(Button, { fullWidth: true, onClick: onAccept ? handleAccept : void 0, disabled: !onAccept }, "OK")
+        React.createElement(Button, { fullWidth: true, onClick: onCancel, disabled: !onCancel }, "Cancel"),
+        React.createElement(Button, { fullWidth: true, onClick: onAccept ? handleAccept : void 0, disabled: !onAccept }, "OK")
       )
     )
   );

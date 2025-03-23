@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { createDisabledTextStyles } from '../common/index.mjs';
 import { blockSizes } from '../common/system.mjs';
@@ -39,7 +39,7 @@ const MenuListItem = forwardRef(({
   primary,
   ...otherProps
 }, ref) => {
-  return React__default.createElement(StyledMenuListItem, {
+  return React.createElement(StyledMenuListItem, {
     "$disabled": disabled,
     size,
     square,

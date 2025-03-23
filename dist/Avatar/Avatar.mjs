@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 import { getSize } from '../common/utils/index.mjs';
 
@@ -34,7 +34,7 @@ const StyledAvatarImg = styled.img`
   height: 100%;
 `;
 const Avatar = forwardRef(({ alt = "", children, noBorder = false, size = 35, square = false, src, ...otherProps }, ref) => {
-  return React__default.createElement(StyledAvatar, { noBorder, ref, size: getSize(size), square, src, ...otherProps }, src ? React__default.createElement(StyledAvatarImg, { src, alt }) : children);
+  return React.createElement(StyledAvatar, { noBorder, ref, size: getSize(size), square, src, ...otherProps }, src ? React.createElement(StyledAvatarImg, { src, alt }) : children);
 });
 Avatar.displayName = "Avatar";
 

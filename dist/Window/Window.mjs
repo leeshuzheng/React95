@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { createBorderStyles, createBoxStyles } from '../common/index.mjs';
 export { WindowContent } from './WindowContent.mjs';
@@ -39,11 +39,11 @@ const ResizeHandle = styled.span`
   `}
 `;
 const Window = forwardRef(({ children, resizable = false, resizeRef, shadow = true, ...otherProps }, ref) => {
-  return React__default.createElement(
+  return React.createElement(
     StyledWindow,
     { ref, shadow, ...otherProps },
     children,
-    resizable && React__default.createElement(ResizeHandle, { "data-testid": "resizeHandle", ref: resizeRef })
+    resizable && React.createElement(ResizeHandle, { "data-testid": "resizeHandle", ref: resizeRef })
   );
 });
 Window.displayName = "Window";

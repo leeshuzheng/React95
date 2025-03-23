@@ -1,4 +1,4 @@
-import React__default, { forwardRef, useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import styled from 'styled-components';
 import { shadow } from '../common/index.mjs';
 import { isReactFocusEvent, isReactMouseEvent } from '../common/utils/events.mjs';
@@ -82,10 +82,10 @@ const Tooltip = forwardRef(({ className, children, disableFocusListener = false,
   const mouseEnterCb = isUsingMouse ? handleEnter : void 0;
   const mouseLeaveCb = isUsingMouse ? handleLeave : void 0;
   const tabIndex = isUsingFocus ? 0 : void 0;
-  return React__default.createElement(
+  return React.createElement(
     Wrapper,
     { "data-testid": "tooltip-wrapper", onBlur: blurCb, onFocus: focusCb, onMouseEnter: mouseEnterCb, onMouseLeave: mouseLeaveCb, tabIndex },
-    React__default.createElement(Tip, { className, "data-testid": "tooltip", position, ref, show, style, ...otherProps }, text),
+    React.createElement(Tip, { className, "data-testid": "tooltip", position, ref, show, style, ...otherProps }, text),
     children
   );
 });

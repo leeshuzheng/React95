@@ -1,4 +1,4 @@
-import React__default, { forwardRef, useMemo } from 'react';
+import React, { forwardRef, useMemo } from 'react';
 import styled from 'styled-components';
 import { noOp } from '../common/utils/index.mjs';
 export { Tab } from './Tab.mjs';
@@ -45,15 +45,15 @@ function splitToChunks(array, parts) {
 const Tabs = forwardRef(({ value, onChange = noOp, children, rows = 1, ...otherProps }, ref) => {
   const tabRowsToRender = useMemo(() => {
     var _a;
-    const childrenWithProps = (_a = React__default.Children.map(children, (child) => {
-      if (!React__default.isValidElement(child)) {
+    const childrenWithProps = (_a = React.Children.map(children, (child) => {
+      if (!React.isValidElement(child)) {
         return null;
       }
       const tabProps = {
         selected: child.props.value === value,
         onClick: onChange
       };
-      return React__default.cloneElement(child, tabProps);
+      return React.cloneElement(child, tabProps);
     })) !== null && _a !== void 0 ? _a : [];
     const tabRows = splitToChunks(childrenWithProps, rows).map((tabs, i) => ({
       key: i,
@@ -63,7 +63,7 @@ const Tabs = forwardRef(({ value, onChange = noOp, children, rows = 1, ...otherP
     tabRows.push(tabRows.splice(currentlySelectedRowIndex, 1)[0]);
     return tabRows;
   }, [children, onChange, rows, value]);
-  return React__default.createElement(StyledTabs, { ...otherProps, isMultiRow: rows > 1, role: "tablist", ref }, tabRowsToRender.map((row) => React__default.createElement(Row, { key: row.key }, row.tabs)));
+  return React.createElement(StyledTabs, { ...otherProps, isMultiRow: rows > 1, role: "tablist", ref }, tabRowsToRender.map((row) => React.createElement(Row, { key: row.key }, row.tabs)));
 });
 Tabs.displayName = "Tabs";
 

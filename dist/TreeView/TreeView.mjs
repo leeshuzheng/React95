@@ -1,4 +1,4 @@
-import React__default, { forwardRef, useCallback } from 'react';
+import React, { forwardRef, useCallback } from 'react';
 import styled, { css } from 'styled-components';
 import useControlledOrUncontrolled from '../common/hooks/useControlledOrUncontrolled.mjs';
 import { LabelText, StyledLabel } from '../common/SwitchBase.mjs';
@@ -170,29 +170,29 @@ function TreeBranch({ className, disabled, expanded, innerRef, level, select, se
     const onClickSummary = !isNodeDisabled ? (event) => select(event, item) : preventDefault;
     const onClickLeaf = !isNodeDisabled ? (event) => select(event, item) : preventDefault;
     const isSelected = selected === item.id;
-    const icon = React__default.createElement(Icon, { "aria-hidden": true }, item.icon);
-    return React__default.createElement(TreeItem, { key: item.label, isRootLevel, role: "treeitem", "aria-expanded": isMenuShown, "aria-selected": isSelected, hasItems }, !hasItems ? React__default.createElement(
+    const icon = React.createElement(Icon, { "aria-hidden": true }, item.icon);
+    return React.createElement(TreeItem, { key: item.label, isRootLevel, role: "treeitem", "aria-expanded": isMenuShown, "aria-selected": isSelected, hasItems }, !hasItems ? React.createElement(
       TitleWithIcon,
       { as: "button", "$disabled": isNodeDisabled, onClick: onClickLeaf },
       icon,
-      React__default.createElement(Text, null, item.label)
-    ) : React__default.createElement(
+      React.createElement(Text, null, item.label)
+    ) : React.createElement(
       Details,
       { open: isMenuShown },
-      React__default.createElement(
+      React.createElement(
         Summary,
         { onClick: onClickSummary, "$disabled": isNodeDisabled },
-        React__default.createElement(
+        React.createElement(
           TitleWithIcon,
           { "$disabled": isNodeDisabled },
           icon,
-          React__default.createElement(Text, null, item.label)
+          React.createElement(Text, null, item.label)
         )
       ),
-      isMenuShown && React__default.createElement(TreeBranch, { className, disabled: isNodeDisabled, expanded, level: level + 1, select, selected, style, tree: (_b = item.items) !== null && _b !== void 0 ? _b : [] })
+      isMenuShown && React.createElement(TreeBranch, { className, disabled: isNodeDisabled, expanded, level: level + 1, select, selected, style, tree: (_b = item.items) !== null && _b !== void 0 ? _b : [] })
     ));
   }, [className, disabled, expanded, isRootLevel, level, select, selected, style]);
-  return React__default.createElement(TreeWrapper, { className: isRootLevel ? className : void 0, style: isRootLevel ? style : void 0, ref: isRootLevel ? innerRef : void 0, role: isRootLevel ? "tree" : "group", isRootLevel }, tree.map(renderLeaf));
+  return React.createElement(TreeWrapper, { className: isRootLevel ? className : void 0, style: isRootLevel ? style : void 0, ref: isRootLevel ? innerRef : void 0, role: isRootLevel ? "tree" : "group", isRootLevel }, tree.map(renderLeaf));
 }
 function TreeInner({ className, defaultExpanded = [], defaultSelected, disabled = false, expanded, onNodeSelect, onNodeToggle, selected, style, tree = [] }, ref) {
   const [expandedInternal, setExpandedInternal] = useControlledOrUncontrolled({
@@ -229,7 +229,7 @@ function TreeInner({ className, defaultExpanded = [], defaultSelected, disabled 
       toggleMenu(event, item.id);
     }
   }, [select, toggleMenu]);
-  return React__default.createElement(TreeBranch, { className, disabled, expanded: expandedInternal, level: 0, innerRef: ref, select: handleSelect, selected: selectedInternal, style, tree });
+  return React.createElement(TreeBranch, { className, disabled, expanded: expandedInternal, level: 0, innerRef: ref, select: handleSelect, selected: selectedInternal, style, tree });
 }
 const TreeView = forwardRef(TreeInner);
 TreeView.displayName = "TreeView";

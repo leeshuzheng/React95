@@ -1,4 +1,4 @@
-import React__default, { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import styled, { css } from 'styled-components';
 import { createBoxStyles, createBorderStyles } from '../common/index.mjs';
 
@@ -31,7 +31,7 @@ const StyledFrame = styled.div`
   ${({ variant }) => createBoxStyles(variant === "field" ? { background: "canvas", color: "canvasText" } : void 0)}
 `;
 const Frame = forwardRef(({ children, shadow = false, variant = "window", ...otherProps }, ref) => {
-  return React__default.createElement(StyledFrame, { ref, shadow, variant, ...otherProps }, children);
+  return React.createElement(StyledFrame, { ref, shadow, variant, ...otherProps }, children);
 });
 Frame.displayName = "Frame";
 
