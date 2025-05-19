@@ -19,6 +19,7 @@ const Wrapper = styled.div`
   position: relative;
   display: inline-block;
   padding-bottom: 26px;
+  width: 100%;
 `;
 
 const Inner = styled.div`
