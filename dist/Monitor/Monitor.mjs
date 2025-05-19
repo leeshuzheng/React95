@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   position: relative;
   display: inline-block;
   padding-bottom: 26px;
+  width: 100%;
 `;
 const Inner = styled.div`
   position: relative;
@@ -14,8 +15,8 @@ const MonitorBody = styled.div`
   position: relative;
   z-index: 1;
   box-sizing: border-box;
-  width: ${(props) => props.width || "195px"};
-  height: ${(props) => props.height || "155px"};
+  width: 100%;
+  aspect-ratio: 1;
   padding: 12px;
   background: ${({ theme }) => theme.material};
   border-top: 4px solid ${({ theme }) => theme.borderLightest};
