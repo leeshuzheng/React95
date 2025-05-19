@@ -29,8 +29,8 @@ const MonitorBody = styled.div<MonitorBodyProps>`
   position: relative;
   z-index: 1;
   box-sizing: border-box;
-  width: ${props => props.width || '195px'};
-  height: ${props => props.height || '155px'};
+  width: 100%;
+  aspect-ratio: 1;
   padding: 12px;
   background: ${({ theme }) => theme.material};
   border-top: 4px solid ${({ theme }) => theme.borderLightest};
